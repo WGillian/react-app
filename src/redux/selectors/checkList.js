@@ -15,14 +15,15 @@ export const checkListSelector = createSelector(
     const isOneOrMoreItemsChecked = _.size(selectedItems) >= 1
     return {
       ...checkListState,
-      isLink1Enabled: isSelected(selectedItems, [1]),
-      isLink2Enabled: isSelected(selectedItems, [3, 5]),
-      isLink3Enabled: isSelected(selectedItems, allItems),
-      isLink4Enabled: !isOneOrMoreItemsChecked,
-      isLink5Enabled: isSelected(selectedItems, oddIds),
-      isLink6Enabled: isSelected(selectedItems, evenIds),
-      isLink7Enabled: isOneOrMoreItemsChecked,
-      oddIds: oddIds,
+      links: [
+        { id: 1, condition: "Item 1 is checked", isEnabled: isSelected(selectedItems, [1])},
+        { id: 2, condition: "Items 3 & 5 are checked", isEnabled: isSelected(selectedItems, [3, 5])},
+        { id: 3, condition: "all Items are checked", isEnabled: isSelected(selectedItems, allItems)},
+        { id: 4, condition: "no items are checked", isEnabled: !isOneOrMoreItemsChecked},
+        { id: 5, condition: "all odd items are checked", isEnabled: isSelected(selectedItems, oddIds)},
+        { id: 6, condition: "all even items are checked", isEnabled: isSelected(selectedItems, evenIds)},
+        { id: 7, condition: "at least 1 item is checked", isEnabled: isOneOrMoreItemsChecked},
+      ],
     }
   },
 )

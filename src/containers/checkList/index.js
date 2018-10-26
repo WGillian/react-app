@@ -18,13 +18,7 @@ class CheckListContainer extends Component {
       />
       <LinkList
         link={'www.google.com'}
-        isLink1Enabled={this.props.isLink1Enabled}
-        isLink2Enabled={this.props.isLink2Enabled}
-        isLink3Enabled={this.props.isLink3Enabled}
-        isLink4Enabled={this.props.isLink4Enabled}
-        isLink5Enabled={this.props.isLink5Enabled}
-        isLink6Enabled={this.props.isLink6Enabled}
-        isLink7Enabled={this.props.isLink7Enabled}
+        links={this.props.links}
       />
       </Div>
     )
