@@ -1,2 +1,2 @@
-export const setTrue = item => ({ type: `checkList/TOGGLE_ITEM_${item}`, payload: item })
+export const toggleItem = item => ({ type: `checkList/TOGGLE_ITEM`, payload: item })
 
