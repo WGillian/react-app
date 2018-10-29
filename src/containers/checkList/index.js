@@ -7,7 +7,7 @@ import LinkList from 'components/linkList'
 import { checkListSelector } from 'redux/selectors/checkList'
 
 class CheckListContainer extends Component {
-  render(){
+  render() {
     return (
       <Div>
         <ItemList
@@ -15,10 +15,7 @@ class CheckListContainer extends Component {
           selectedItems={this.props.selectedItems}
           onToggleItem={item => this.props.dispatch(toggleItem(item))}
         />
-        <LinkList
-          link={'www.google.com'}
-          links={this.props.links}
-        />
+        <LinkList link={'www.google.com'} links={this.props.links} />
       </Div>
     )
   }
