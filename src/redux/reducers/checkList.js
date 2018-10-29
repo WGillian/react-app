@@ -11,16 +11,16 @@ const removeItem = (items, currentItem) => {
 }
 
 const addOrRemoveItem = (items, currentItem) => {
-  if (!_.includes(items, currentItem)) {
-    return [...items, currentItem]
+  if (_.includes(items, currentItem)) {
+    return removeItem(items, currentItem)
   }
 
-  return removeItem(items, currentItem)
+  return [...items, currentItem]
 }
 
 export default (state = initialState, action) => {
   switch (action.type) {
-    case `checkList/TOGGLE_ITEM`:
+    case 'checkList/TOGGLE_ITEM':
       return {
         ...state,
         selectedItems: addOrRemoveItem(state.selectedItems, action.payload),
