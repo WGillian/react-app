@@ -1,10 +1,9 @@
 import React from 'react'
 import _ from 'lodash'
+import { Spring, Trail } from 'react-spring'
 import Div from 'components/core/div'
 import Text from 'components/core/text'
 import './style.scss'
-
-import { Spring, Trail } from 'react-spring'
 
 const LinkProgress = props => {
   const [ goFrom, to ] = props.item.props.isEnabled ? [{ background: '#fff' }, { background: '#50c878' }] : [{ background: '#50c878' }, { background: '#fff' }]

@@ -1,11 +1,10 @@
 import React from 'react'
 import _ from 'lodash'
+import { Trail } from 'react-spring'
 import Div from 'components/core/div'
 import Text from 'components/core/text'
 import CheckBox from 'components/core/checkBox'
 import './style.scss'
-
-import { Trail } from 'react-spring'
 
 const Item = props => (
   <Div addStyle="item">
