@@ -1,2 +1,4 @@
-export const toggleItem = item => ({ type: 'checkList/TOGGLE_ITEM', payload: item })
-
+export const toggleItem = item => ({
+  type: 'checkList/TOGGLE_ITEM',
+  payload: item,
+})

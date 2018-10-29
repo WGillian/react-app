@@ -4,8 +4,11 @@
   "private": true,
   "dependencies": {
     "classnames": "^2.2.6",
+    "husky": "^1.1.2",
+    "lint-staged": "^8.0.0",
     "lodash": "^4.17.11",
     "node-sass": "^4.9.4",
+    "prettier": "^1.14.3",
     "react": "^16.6.0",
     "react-dom": "^16.6.0",
     "react-redux": "^5.0.7",
@@ -19,7 +22,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "format:js": "prettier --single-quote --trailing-comma all --no-semi --print-width 150 --write \"src/**/*.{js,jsx}\""
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -30,6 +34,17 @@
     "not ie <= 11",
     "not op_mini all"
   ],
+  "lint-staged": {
+     "src/**/*.{js,jsx,json,css,scss}": [
+       "yarn format:js",
+       "git add"
+     ]
+ },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "settings": {
     "import/resolver": {
       "node": {
