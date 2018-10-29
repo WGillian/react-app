@@ -8,18 +8,17 @@ import { checkListSelector } from 'redux/selectors/checkList'
 
 class CheckListContainer extends Component {
   render(){
-    console.log(this.props)
     return (
       <Div>
-      <ItemList
-        itemIds={this.props.itemIds}
-        selectedItems={this.props.selectedItems}
-        onToggleItem={item => this.props.dispatch(toggleItem(item))}
-      />
-      <LinkList
-        link={'www.google.com'}
-        links={this.props.links}
-      />
+        <ItemList
+          itemIds={this.props.itemIds}
+          selectedItems={this.props.selectedItems}
+          onToggleItem={item => this.props.dispatch(toggleItem(item))}
+        />
+        <LinkList
+          link={'www.google.com'}
+          links={this.props.links}
+        />
       </Div>
     )
   }
