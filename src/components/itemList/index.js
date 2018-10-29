@@ -18,7 +18,7 @@ export default props => {
   return (
     <Div addStyle="itemListContainer">
       <Trail items={items} keys={item => item.key} from={{ transform: 'translate3d(0,-200px,0)' }} to={{ transform: 'translate3d(0,0px,0)' }}>
-        {item => props => <span style={props}>{item}</span>}
+        {item => props => <Div style={props}>{item}</Div>}
       </Trail>
     </Div>
   )
